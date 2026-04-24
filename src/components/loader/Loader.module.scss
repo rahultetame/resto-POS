@@ -1,0 +1,10 @@
+.loader {
+  display: grid;
+  min-height: 260px;
+  place-items: center;
+  color: var(--color-primary);
+}
+
+.loader--screen {
+  min-height: 100vh;
+}

@@ -1,0 +1,65 @@
+.kiosk-page {
+  display: grid;
+  gap: 28px;
+  color: var(--color-text);
+}
+
+.kiosk-page__hero {
+  display: grid;
+  min-height: 34vh;
+  align-content: end;
+  gap: 14px;
+  padding: clamp(24px, 5vw, 64px);
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(5, 8, 22, 0.1), rgba(5, 8, 22, 0.78)),
+    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80') center/cover;
+  border-radius: var(--radius-lg);
+}
+
+.kiosk-page__title {
+  max-width: 780px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+}
+
+.kiosk-page__copy {
+  max-width: 620px;
+  margin: 0;
+  color: #f8fafc;
+  font-size: 1.1rem;
+}
+
+.kiosk-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.kiosk-card {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.kiosk-card__title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.kiosk-card__price {
+  color: var(--color-accent);
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .kiosk-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

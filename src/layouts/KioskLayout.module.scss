@@ -1,0 +1,7 @@
+.kiosk {
+  min-height: 100vh;
+  padding: clamp(18px, 3vw, 36px);
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.22), transparent 34%),
+    var(--color-background);
+}

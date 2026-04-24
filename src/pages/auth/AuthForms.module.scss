@@ -1,0 +1,37 @@
+.auth-card {
+  display: grid;
+  width: 100%;
+  max-width: 420px;
+  gap: 24px;
+  margin: 0 auto;
+}
+
+.auth-card__header {
+  display: grid;
+  gap: 8px;
+}
+
+.auth-card__title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.auth-card__copy {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.auth-card__form {
+  display: grid;
+  gap: 18px;
+}
+
+.auth-card__footer {
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.auth-card__link {
+  color: var(--color-primary);
+  font-weight: 800;
+}

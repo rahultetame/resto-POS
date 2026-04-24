@@ -1,0 +1,10 @@
+.table {
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.table__head {
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+}
