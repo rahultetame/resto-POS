@@ -1,18 +1,16 @@
 import { Box } from '@mui/material';
 import { Outlet } from 'react-router-dom';
-// import Sidebar from '../components/wrapperComponents/Sidebar';
-// import Header from '../components/wrapperComponents/Header';
-import { useAppSelector } from '../hooks/useAppSelector';
 import Sidebar from './Sidebar';
 import Header from './Header';
+import { useState } from 'react';
 
 const MainLayout = () => {
-  const { sidebarToggle } = useAppSelector((state) => state.ui);
+  const [sidebarToggle, setSidebarToggle] = useState(true);
 
   return (
     <Box display='flex' height='100vh'>
       {/* Sidebar */}
-      <Sidebar isOpen={sidebarToggle} />
+      <Sidebar isOpen={sidebarToggle} setSidebarToggle={setSidebarToggle} />
 
       {/* Main Area */}
       <Box

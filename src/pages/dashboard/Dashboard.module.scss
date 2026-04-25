@@ -1,35 +1,123 @@
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+/* Dashboard.module.scss */
+
+.dashboard {
+  padding: 24px;
+  background: #f3f3f3;
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
   gap: 16px;
 }
 
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.8fr);
-  gap: 20px;
+.filterBtn {
+  background: #d9d9d9 !important;
+  color: #222 !important;
+  box-shadow: none !important;
 }
 
-.panel {
-  display: grid;
+.dateChip {
+  height: 44px !important;
+  border-radius: 12px !important;
+  background: #30323b !important;
+  color: white !important;
+}
+
+.select {
+  min-width: 220px;
+  background: #30323b;
+  border-radius: 12px;
+
+  :global(.MuiOutlinedInput-notchedOutline) {
+    border: none;
+  }
+
+  :global(.MuiSelect-select) {
+    color: white;
+  }
+
+  :global(svg) {
+    color: white;
+  }
+}
+
+.layoutContainer {
+  background: #dedede;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.areaTitle {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.tableGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.tableWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chairRow {
+  display: flex;
   gap: 16px;
+  margin: 8px 0;
 }
 
-.panel__title {
-  margin: 0;
-  font-size: 1.15rem;
+.chair {
+  width: 40px;
+  height: 20px;
+  border-radius: 8px 8px 2px 2px;
 }
 
-@media (max-width: 1100px) {
-  .metrics,
-  .dashboard-grid {
-    grid-template-columns: 1fr 1fr;
+.tableCard {
+  background: white;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
   }
 }
 
-@media (max-width: 720px) {
-  .metrics,
-  .dashboard-grid {
-    grid-template-columns: 1fr;
-  }
+.statusText {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.duration {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.footer {
+  margin-top: 40px;
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legendTitle {
+  font-size: 24px;
+  font-weight: 700;
 }

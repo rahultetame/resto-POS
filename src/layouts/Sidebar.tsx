@@ -1,15 +1,9 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import { Box, IconButton, Tooltip } from '@mui/material';
 import { NavLink } from 'react-router-dom';
-// import { sidebarConfig } from '../../config/sidebarConfig';
-// import { useAppDispatch } from '../../hooks/useAppDispatch';
-// import { toggleSidebar } from '../../store/slices/uiSlice';
 import './Sidebar.scss';
-import { useAppDispatch } from '../hooks/useAppDispatch';
-import { toggleSidebar } from '../store/slices/uiSlice';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
-import StorefrontIcon from '@mui/icons-material/Storefront';
 import { PATH } from '../routes/path';
 
 export interface SidebarItem {
@@ -38,11 +32,10 @@ export const sidebarConfig: SidebarItem[] = [
 
 interface Props {
   isOpen: boolean;
+  setSidebarToggle: any;
 }
 
-const Sidebar = ({ isOpen }: Props) => {
-  const dispatch = useAppDispatch();
-
+const Sidebar = ({ isOpen, setSidebarToggle }: Props) => {
   return (
     <Box className={`sidebar ${isOpen ? 'open' : 'collapsed'}`}>
       {/* Top Section */}
@@ -50,7 +43,7 @@ const Sidebar = ({ isOpen }: Props) => {
         {isOpen && <span className='sidebar__brand'>Restaurant POS</span>}
 
         <Tooltip sx={{ ml: 1.5 }} title='Toggle Sidebar'>
-          <IconButton onClick={() => dispatch(toggleSidebar())}>
+          <IconButton onClick={() => setSidebarToggle(!isOpen)}>
             <MenuIcon sx={{ color: '#fff' }} />
           </IconButton>
         </Tooltip>

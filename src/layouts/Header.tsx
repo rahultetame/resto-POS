@@ -9,13 +9,6 @@ import { PATH } from '../routes/path';
 import DateBadge from '../components/date/DateBadge';
 import { setThemeMode } from '../store/slices/uiSlice';
 import { CustomButton } from '../components/form';
-// import type { AppThemeMode } from '../../config/theme';
-// import { CustomButton } from '../form';
-// import DateBadge from '../date/DateBadge';
-// import { useAppDispatch, useAppSelector } from '../../hooks';
-// import { logout } from '../../store/slices/loginSlice';
-// import { setThemeMode } from '../../store/slices/uiSlice';
-// import { PATH } from '../../routes/path';
 
 const themeOptions: AppThemeMode[] = ['light', 'dark', 'pos', 'kiosk'];
 
