@@ -85,7 +85,7 @@
 .tableCard {
   background: white;
   border-radius: 4px;
-  padding: 16px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -98,12 +98,12 @@
 }
 
 .statusText {
-  font-size: 15px;
+  font-size: 14px !important;
   font-weight: 600;
 }
 
 .duration {
-  font-size: 12px;
+  font-size: 11px !important;
   margin-top: 6px;
 }
 
