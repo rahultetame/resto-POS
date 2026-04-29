@@ -1,9 +1,9 @@
 import { Box, Step, StepLabel, Stepper } from '@mui/material';
 import { useLayoutStore } from '../store/useLayoutStore';
 import AreaForm from './AreaForm';
-
 import LayoutCanvas from './LayoutCanvas';
 import SeatingForm from './SeatingForm';
+import Preview from './Preview';
 
 const steps = [
   'Area Setup',
@@ -24,7 +24,7 @@ const StepperLayout = () => {
       case 2:
         return <LayoutCanvas />;
       case 3:
-        return <div>Preview</div>;
+        return <Preview />;
       default:
         return null;
     }

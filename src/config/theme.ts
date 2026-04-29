@@ -4,14 +4,21 @@ export type AppThemeMode = 'light' | 'dark' | 'pos' | 'kiosk';
 type MuiPaletteMode = 'light' | 'dark';
 
 const commonTypography = {
-  fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+  fontFamily:
+    'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
   button: {
     textTransform: 'none' as const,
     fontWeight: 700,
   },
 };
 
-const makeTheme = (mode: MuiPaletteMode, primary: string, secondary: string, background: string, paper: string) =>
+const makeTheme = (
+  mode: MuiPaletteMode,
+  primary: string,
+  secondary: string,
+  background: string,
+  paper: string,
+) =>
   createTheme({
     palette: {
       mode,
